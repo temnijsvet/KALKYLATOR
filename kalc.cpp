@@ -1,18 +1,18 @@
 ﻿#include <iostream>
-
+using namespace std;
 int main() {
     setlocale(LC_ALL, "Russian");
     double num1, num2;
     char op;
 
-    std::cout << "Введите первое число: ";
-    std::cin >> num1;
+    cout << "Введите первое число: ";
+    cin >> num1;
 
-    std::cout << "Введите оператор (+, -, *, /): ";
-    std::cin >> op;
+    cout << "Введите оператор (+, -, *, /): ";
+    cin >> op;
 
-    std::cout << "Введите второе число: ";
-    std::cin >> num2;
+    cout << "Введите второе число: ";
+    cin >> num2;
 
     double result;
     bool valid = true;
@@ -32,7 +32,7 @@ int main() {
 
     case '/':
         if (num2 == 0) {
-            std::cout << "Ошибка: деление на ноль!" << std::endl;
+            cout << "Ошибка: деление на ноль!" << endl;
             valid = false;
         }
         else {
@@ -41,13 +41,13 @@ int main() {
         break;
 
     default:
-        std::cout << "Ошибка: неизвестный оператор!" << std::endl;
+        cout << "Ошибка: неизвестный оператор!" << endl;
         valid = false;
     }
 
     if (valid) {
-        std::cout << "Результат: " << result << std::endl;
+        cout << "Результат: " << result << endl;
     }
-
+    int a; cin >> a;
     return 0;
 }
